@@ -4,8 +4,9 @@ RUN apk add --no-cache \
         cargo \
         openssl-dev
 
-ENV FLODGATT_VERSION "0.3.0"
-ENV FLODGATT_HASH "200ad15d004c098317a541f5bcd6294f2f3ebc9676c3d9ffd2d45b54c758d320"
+ENV FLODGATT_VERSION "0.3.5"
+ENV FLODGATT_HASH "bfb47464494df2b517fa4873334ac5ef44615a7dc4df1020a3256b75f99a31f6"
+
 RUN wget -O flodgatt.tar.gz "https://github.com/tootsuite/flodgatt/archive/$FLODGATT_VERSION.tar.gz" \
  && echo "$FLODGATT_HASH  flodgatt.tar.gz" | sha256sum -c \
  && tar xzf flodgatt.tar.gz \
